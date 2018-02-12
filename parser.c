@@ -54,6 +54,8 @@ static void	engine(t_parse *in, int *i)
 		ft_udecimal(&specs, in);
 	else if (specs.dtype == 'x' || specs.dtype == 'X')
 		ft_hex(in, &specs);
+	else if (specs.dtype == 'b')
+		ft_binary(&specs, in);
 }
 
 static void		buffprint(t_parse *in, int start, int i)

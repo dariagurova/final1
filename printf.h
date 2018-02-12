@@ -132,6 +132,7 @@ void				parser(t_parse *in);
 
 int					is_flag(char flag);
 int					is_spec(t_meta *specs, char c);
+void				space(t_meta *specs, t_print *out);
 void				parser(t_parse *in);
 int					get_flags(t_meta *specs, char *format, int *i);
 void				cast_signed(t_meta *specs, t_parse *in);
@@ -145,6 +146,6 @@ void				ft_pointer(t_parse *in, t_meta *specs);
 void				ft_octal(t_meta *specs, t_parse *in);
 void				ft_udecimal(t_meta *specs, t_parse *in);
 void				ft_hex(t_parse *in, t_meta *specs);
-//void				ft_binary(t_meta *specs, t_parse *in);
+void				ft_binary(t_meta *specs, t_parse *in);
 
 #endif

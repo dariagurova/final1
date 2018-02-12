@@ -66,12 +66,6 @@ static void print_width(t_meta *specs, t_print *out)
 		print_char(specs, ' ', out->spacepad);
 }
 
-static void	space(t_meta *specs, t_print *out)
-{
-	if (specs->add_space == true && out->sign == 0)
-		print_char(specs, ' ', 1);
-}
-
 void		ft_decimal(t_meta *specs, t_parse *in)
 {
 	t_print out;

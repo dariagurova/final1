@@ -13,6 +13,7 @@ SRCS = ft_printf.c \
 		ft_pointer.c \
 		ft_octal.c \
 		ft_hex.c \
+		ft_binary.c \
 		helpers.c \
 		itoa_base.c \
 		libft1.c \
