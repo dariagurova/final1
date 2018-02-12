@@ -31,7 +31,7 @@ $(NAME): $(OBJ)
 	@gcc -Wall -Wextra -Werror -c $(SRCS)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
-	//@gcc $(CFLAGS) -o $(EXE) main.c libftprintf.a
+	
 %.o: %.c
 	gcc -g -Wall -Wextra -Werror -Ift_printf -c $<	
 
