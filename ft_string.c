@@ -12,6 +12,8 @@
 
 #include "./printf.h"
 
+#include "./printf.h"
+
 static void	print_width(t_meta *specs)
 {
 	int print;
@@ -43,6 +45,10 @@ static void	print_precis(t_meta *specs)
 void		ft_string(t_meta *specs, t_parse *in)
 {
 	specs->data_type.str = va_arg(in->arg, char*);
+	if (specs->data_type.str == NULL)
+	{
+		specs->data_type.str = "(null)";
+	}
 	specs->len = ft_strlen(specs->data_type.str);
 	if (specs->left_algn == true)
 	{
