@@ -19,23 +19,20 @@ SRCS = ft_printf.c \
 		libft1.c \
 	    libft2.c \
 
-CFLAGS = -Wall -Wextra -Werror -I./printf.h
-OBJ =	${SRCS:.c=.o}
+
+CFLAGS = -Wall -Wextra -Werror
+
 RM = @rm -f
 
 EXE = test
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	@gcc -Wall -Wextra -Werror -c $(SRCS)
-	@ar rc $(NAME) $(OBJ)
+$(NAME):
+	@gcc $(CFLAGS) -c -I./printf.h $(SRCS)
+	@ar rc $(NAME) *.o
 	@ranlib $(NAME)
 	
-%.o: %.c
-	gcc -g -Wall -Wextra -Werror -Ift_printf -c $<	
-
-
 clean:
 	$(RM) *.o
 
