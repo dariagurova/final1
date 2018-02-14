@@ -19,19 +19,16 @@ SRCS = ft_printf.c \
 		libft1.c \
 	    libft2.c \
 
-CFLAGS = -Wall -Wextra -Werror -I./printf.h
+FLAGS = -Wall -Wextra -Werror
 
 RM = @rm -f
-
-EXE = test
 
 all: $(NAME)
 
 $(NAME):
-	@gcc -Wall -Wextra -Werror -c $(SRCS)
+	@gcc $(FLAGS) -c -I./printf.h $(SRCS)
 	@ar rc $(NAME) *.o
 	@ranlib $(NAME)
-	@gcc $(CFLAGS) -o $(EXE) main.c libftprintf.a
 
 
 clean:
@@ -43,3 +40,5 @@ fclean: clean
 
 
 re: fclean all
+
+.PHONY: all clean fclean re
